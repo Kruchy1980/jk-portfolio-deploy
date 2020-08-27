@@ -1,0 +1,19 @@
+/* The hammer impact animation */
+
+@keyframes hammer-impact {
+    0% {
+        transform: rotateZ(45deg);
+    }
+    25% {
+        transform: rotateZ(000deg);
+    }
+    50% {
+        transform: rotateZ(45deg);
+    }
+    75% {
+        transform: rotateZ(000deg);
+    }
+    100% {
+        transform: rotateZ(45deg);
+    }
+}

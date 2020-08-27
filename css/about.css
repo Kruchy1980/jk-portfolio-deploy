@@ -1,0 +1,160 @@
+#about {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    height: 969px;
+    background-image: linear-gradient(315deg, #666666aa 0%, #000 53%);
+}
+
+
+/* The content of about section */
+
+
+/* About inner */
+
+.about__inner {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Display of iiner content */
+
+.about__inner__display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+/* About inner top */
+
+.about__inner--top {
+    min-height: 44px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px 0;
+    flex-wrap: wrap;
+}
+
+
+/* About inner image */
+
+.about__inner__image {
+    width: 75px;
+    border-radius: 30%;
+    margin: 110px 0 30px 0;
+}
+
+
+/* Ipad and more */
+
+@media(min-width: 768px) {
+    .about__inner--top {
+        height: 429px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        margin-top: 130px;
+    }
+    .about__inner__image {
+        margin: 0 30px;
+        width: 150px;
+    }
+}
+
+
+/* About inner text */
+
+.about__inner--text {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__inner--text-content {
+    color: #ccc;
+    font-size: 1em;
+    transition: font-size 1s;
+}
+
+
+/* About bottom */
+
+.about__inner--bottom {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+/* About certs */
+
+.about__inner__certs {
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media(min-width:768px) {
+    .about__inner__certs {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 10px auto;
+        flex-wrap: wrap;
+    }
+    .about__inner--text-content {
+        font-size: 24px;
+    }
+    .about__inner--bottom {
+        max-height: 300px;
+    }
+}
+
+
+/* About certs image */
+
+.about__inner__certs__image {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    transition: width 0.6s, height 0.6s, transform 0.6s;
+}
+
+.about__inner__certs__image:hover {
+    transform: scale(3);
+}
+
+@media(min-width:768px) {
+    .about__inner__certs__image {
+        /* margin: 10px; */
+        width: 100px;
+        height: 100px;
+    }
+    .about__inner__certs__image:hover {
+        transform: scale(5);
+    }
+}
+
+
+/* Additional classes */
+
+.highlighted {
+    color: #05af05;
+}
+
+strong {
+    color: #2a972a;
+}

@@ -1,0 +1,7 @@
+.container-small {
+    /* align-items: stretch; */
+    width: 95%;
+    max-width: 1100px;
+    min-height: 100vh;
+    margin: 0 auto;
+}

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="./images/bookmark-icon/title-icon-2.jpg" rel="icon" />
+    <title>Portfolio Jakub Kruszyński</title>
+    <!-- Normalize file -->
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" rel="stylesheet" />
+    <!-- Kits in case if icons from font awesom will be needed -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/ac750a2c2d.js"></script>
+    <!-- Fonts in case of use another than in html are -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@400;800&display=swap" rel="stylesheet" />
+    <!-- font-family: 'Pacifico', cursive;
+    font-family: 'Roboto Slab', serif;
+    -->
+    <!-- Styles Sheets -->
+    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/containers.css" rel="stylesheet" />
+    <link href="./css/animation.css" rel="stylesheet" />
+    <link href="./css/navigation.css" rel="stylesheet" />
+    <link href="./css/about.css" rel="stylesheet" />
+    <link href="./css/projects-slider.css" rel="stylesheet" />
+    <link href="./css/cv.css" rel="stylesheet" />
+    <link href="./css/footer.css" rel="stylesheet" />
+
+    <style></style>
+</head>
+
+<!-- For mobile navigation icon <i class="fas fa-bars"></i>
+-->
+
+<body>
+    <!-- Nav -->
+    <nav class="main-navigation">
+        <div class="main-navigation__inner">
+            <!-- Logo navigation -->
+            <div class="main-navigation__logo">
+                <a class="main-navigation__logo--link" href="#home">
+                    <img alt="JK Logo" class="main-navigation__logo--image" src="./images/bookmark-icon/title-icon-main.jpg" />
+                </a>
+            </div>
+            <!-- Main navigation list -->
+            <ul class="main-navigation__menu js-main-navigation__menu">
+                <li class="main-navigation__menu-item">
+                    <a class="main-navigation__menu-item__link" href="#about">
+                        <i class="fas fa-address-card"></i> O mnie
+                    </a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a class="main-navigation__menu-item__link submenu__link" href="#projects">
+                        <i class="fab fa-r-project"></i>
+                        <button class="main-navigation__menu-item__submenu--dropdown-btn">
+                            Projekty
+                            <ul class="main-navigation__menu-item__submenu--list hidden__submenu"></ul>
+                        </button>
+
+                    </a>
+
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a class="main-navigation__menu-item__link hamm-impact hamm-animation" href="#cv" title="W przygotowaniu">
+                        <i class="fas fa-hammer hamm-animation"></i> CV
+                    </a>
+                </li>
+            </ul>
+            <button class="main-navigation__mobile-button js-main-navigation__mobile-button">
+                <i class="fas fa-ellipsis-v"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Section About -->
+    <!-- <div class="container"> -->
+    <section id="about">
+        <div class="about__inner">
+            <div class="about__inner__display">
+                <div class="about__inner--top">
+                    <img alt="Jakub Kruszyński" class="about__inner__image" src="./images/jakub-k/owner.jpg" />
+                    <div class="about__inner--text">
+                        <p class="about__inner--text-content">
+                            Ukończyłem studia podyplomowe na WSB Gdynia w kierunku programista aplikacji internetowych –
+                            <em>junior front-end developer</em> w roku 2020 oraz
+                            <em>tester oprogramowania</em> w roku 2018 - studia podyplomowe podczas których zdałem
+                            <strong>egzamin ISTQB Foundation lvl</strong>. Lubię zdobywać nową wiedzę i jestem zainteresowany branżą IT oraz rozwojem w kierunku front-end developera również z częścią backendową na full stack developer. Obecnie zajmuję
+                            się rozwojem w projektowaniu stron internetowych w różnych technologiach. Poznaję języki HTML, CSS i JS oraz dodatkowe technologie jak np. framework
+                            <span class="highlighted">Bootstrap</span>. Rozwijam się również w e frameworku java-scripto’wym
+                            <span class="highlighted">Vue.js</span> wraz z jego otoczką (vuelidate, vuex, v-tools). Skończyłem również kilka kursów na udemy odnośnie
+                            <strong>Vue.js</strong> jak i
+                            <strong>Node.js z Express.js</strong> oraz relacyjną bazą danych
+                            <strong>MongoDB</strong>.
+                        </p>
+                    </div>
+                </div>
+                <div class="about__inner--bottom">
+                    <div class="about__inner__certs">
+                        <img alt="Tester Oprogramowania" class="about__inner__certs__image" src="./images/udemy-certs/tester.jpg" />
+                        <img alt="Junior front-end Developer" class="about__inner__certs__image" src="./images/udemy-certs/jfed.jpg" />
+                        <img alt class="about__inner__certs__image" src="./images/udemy-certs/sjsi.jpg" />
+                        <img alt="Guide to Front-end" class="about__inner__certs__image" src="./images/udemy-certs/js.jpg" />
+                        <img alt="Node + Express.js" class="about__inner__certs__image" src="./images/udemy-certs/node.jpg" />
+                        <img alt="Vue.js" class="about__inner__certs__image" src="./images/udemy-certs/vue-js.jpg" />
+                        <img alt="Javascript" class="about__inner__certs__image" src="./images/udemy-certs/javacript-pl.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- </div> -->
+
+    <!-- Projects -->
+
+    <section id="projects">
+        <!-- <div class="container-small"> -->
+        <div class="projects__box">
+            <img alt="Pierwszy projekt" class="projects__box__item--image" src="./images/proj-images/1.drink-searcher.jpg" />
+            <a alt="Wyszukiwarka drinków" class="projects__box__item--title" href="https://kruchy1980.github.io/drink-searcher/" target="_blank">Wyszukiwarka drinków
+            </a>
+            <p class="projects__box__item--description">Prosty projekcik, gdzie z przygotowanej w HTML'u listy możemy wyszukać dany produkt(drink) wpisując jego nazwę w wyszukiwarkę</p>
+            <div class="indicators-dots">
+                <span class="active" id="1"></span>
+                <span id="2"></span>
+                <span id="3"></span>
+                <span id="4"></span>
+                <span id="5"></span>
+                <span id="6"></span>
+                <span id="7"></span>
+                <span id="8"></span>
+                <span id="9"></span>
+                <span id="10"></span>
+                <span id="11"></span>
+            </div>
+            <!-- </div> -->
+    </section>
+
+
+    <section id="cv">
+        <div class="container-small">
+            <div class="cv__display">
+                <div class="cv-info">
+                    <p class="cv-info--text">CV w formie online w przygotowaniu, można pobrać CV w języku polskim i angielskim.</p>
+                </div>
+                <div class="cv-info__downloaded">
+                    <a class="cv-info__download--link" download href="./files-to-download/CV Jakub Kruszynski pl.pdf" title="CV po polsku">
+                        CV po Polsku
+                        <img alt="Polish CV" class="cv-info__download--image" src="./images/download-pdf/pdf.svg" />
+                    </a>
+                    <a class="cv-info__download--link" download href="files-to-download/Jakub Kruszynski eng.pdf" title="CV in english">
+                        CV in English
+                        <img alt="English CV" class="cv-info__download--image" src="./images/download-pdf/pdf.svg" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bottom">
+        <div class="bottom-box">
+            <p class="footer-text">&copy; 2020 by Jakub Kruszyński 👍</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/dynamic-nav.js"></script>
+    <script src="./scripts/submenu-list.js"></script>
+    <script src="./scripts/impact-audio.js"></script>
+    <script src="./scripts/submenu-dropdown.js"></script>
+    <script src="./scripts/carousel.js"></script>
+
+
+</body>
+
+</html>
