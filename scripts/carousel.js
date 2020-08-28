@@ -3,7 +3,14 @@
 const slideList = [{
         img: './images/proj-images/1.other-portfolio.jpg',
         title: `Portfolio z większymi projektami`,
-        shortDescription: 'Jest to strona portfolio zbierająca kilka aplikacji włącznie z dwuosobowym projektem - w rozwoju',
+        shortDescription: `Jest to strona portfolio zbierająca kilka aplikacji włącznie z dwuosobowym projektem - w rozwoju.
+                <ol>Użyte techonologie:
+                    <li>HTML,</li>
+                    <li>CSS,</li>
+                    <li>BOOTSTRAP,</li>
+                    <li>JAVASCRIPT,</li>
+                    <li>VUE.js + OTOCZKA</li>
+                </ol>`,
         source: 'https://kruchy1980.github.io/wsb-landing-portfolio/',
     },
     {
