@@ -1,10 +1,10 @@
 // Variables
 // The array with needed data to our slider
 const slideList = [{
-        img: './images/proj-images/1.drink-searcher.jpg',
-        title: 'Wyszukiwarka drinków',
-        shortDescription: 'Prosta strona Prosty projekcik, gdzie z przygotowanej w HTML\'u listy możemy wyszukać dany produkt(drink) wpisując jego nazwę w wyszukiwarkę.',
-        source: 'https://kruchy1980.github.io/drink-searcher/',
+        img: './images/proj-images/1.other-portfolio.jpg',
+        title: `Portfolio z większymi projektami`,
+        shortDescription: 'Jest to strona portfolio zbierająca kilka aplikacji włącznie z dwuosobowym projektem - w rozwoju',
+        source: 'https://kruchy1980.github.io/wsb-landing-portfolio/',
     },
     {
         img: './images/proj-images/2.todo-app.jpg',
@@ -51,25 +51,31 @@ const slideList = [{
     {
         img: './images/proj-images/9.budget.jpg',
         title: 'Twój Portfel',
-        shortDescription: 'Prosta apka obliczająca Twój budżet na podstawie podanych danych - bez użycia zewnętrznej bazy danych',
+        shortDescription: `Aplikacja obliczająca Twój budżet na podstawie podanych danych - bez użycia zewnętrznej bazy danych`,
         source: 'https://kruchy1980.github.io/finance-manager/',
     },
     {
         img: './images/proj-images/10.currency-rate.jpg',
         title: 'Przelicznik wymiany walut',
-        shortDescription: 'Prosta apka korzystająca z api przeliczników walut i obliczająca ilość otrzymanych pieniędzy po wymiani',
+        shortDescription: `Aplikacja korzystająca z api przeliczników walut i obliczająca ilość otrzymanych pieniędzy po wymianie.
+        Technologie użyte:
+        <ul>       
+        <1i>1. HTML</li>
+        <1i>2. CSS</li>
+        <1i>3. Javascript</li>
+        </ul>`,
         source: 'https://kruchy1980.github.io/exchange-rate-app/',
     },
     {
-        img: './images/proj-images/11.other-portfolio.jpg',
-        title: 'Portfolio z większymi projektami',
-        shortDescription: 'Jest to strona portfolio zbierająca kilka aplikacji włącznie z dwuosobowym projektem - w rozwoju',
-        source: 'https://kruchy1980.github.io/wsb-landing-portfolio/ ',
-    },
+        img: './images/proj-images/11.drink-searcher.jpg',
+        title: 'Wyszukiwarka drinków',
+        shortDescription: `Projekt, w którym z przygotowanej w HTML\'u listy możemy wyszukać dany produkt(drink) wpisując jego nazwę w wyszukiwarkę.<br>Użyte technologie użyte:<ul><1i>1. HTML</li><1i>2. CSS</li><1i>3.Javascript</li></ul>`,
+        source: 'https://kruchy1980.github.io/drink-searcher/',
+    }
 ];
 
 // Sliding time - defaulted value
-let timer = 4500;
+let timer = 8000;
 // Active slide- defaulted value
 let activeSlide = 0;
 // Single image
@@ -100,7 +106,7 @@ const changeOnArrows = (e) => {
     singleImage.src = slideList[activeSlide].img;
     slideTitle.href = slideList[activeSlide].source;
     slideTitle.alt = slideList[activeSlide].title;
-    slideTitle.textContent = slideList[activeSlide].title;
+    slideTitle.innerHTML = `<i class="far fa-hand-point-right"></i> ${slideList[activeSlide].title}`;
     slideDescription.innerHTML = slideList[activeSlide].shortDescription;
     // Change the indicator
     indicatorActiveSet();
@@ -123,7 +129,7 @@ const slideChange = () => {
     singleImage.src = slideList[activeSlide].img;
     slideTitle.href = slideList[activeSlide].source;
     slideTitle.alt = slideList[activeSlide].title;
-    slideTitle.textContent = slideList[activeSlide].title;
+    slideTitle.innerHTML = `<i class="far fa-hand-point-right"></i> ${slideList[activeSlide].title}`;
     slideDescription.innerHTML = slideList[activeSlide].shortDescription;
     indicatorActiveSet();
 };
@@ -138,20 +144,12 @@ const switchSlideOnClick = e => {
         singleImage.src = slideList[activeSlide].img;
         slideTitle.href = slideList[activeSlide].source;
         slideTitle.alt = slideList[activeSlide].title;
-        slideTitle.textContent = slideList[activeSlide].title;
+        slideTitle.innerHTML = `<i class="far fa-hand-point-right"></i> ${slideList[activeSlide].title}`;
         slideDescription.innerHTML = slideList[activeSlide].shortDescription;
         indicatorActiveSet();
         slideInterval = setInterval(slideChange, timer);
     }
 };
-
-// Switch slide on click
-// const swichIndicatorsOnClick = () => {
-//     if (indicators) {
-//         indicators.forEach(el => console.log(el));
-//     }
-// }
-
 
 
 // Declare interval method
