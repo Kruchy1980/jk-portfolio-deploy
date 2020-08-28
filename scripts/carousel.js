@@ -10,73 +10,129 @@ const slideList = [{
                     <li>BOOTSTRAP,</li>
                     <li>JAVASCRIPT,</li>
                     <li>VUE.js + OTOCZKA</li>
-                </ol>`,
+                    <li>FIREBASE</li>
+                </ol>
+                `,
         source: 'https://kruchy1980.github.io/wsb-landing-portfolio/',
     },
     {
         img: './images/proj-images/2.todo-app.jpg',
         title: 'Todo Apka',
-        shortDescription: 'Prosta todo Apka w JS, HTML i CSS',
+        shortDescription: `Todo Apka, gdzie możemy dodawać swoje rzeczy do zrobienia - projekt bez połączenia z zewnętrzną bazą danych. 
+                <ol>Użyte techonologie:
+                    <li>HTML,</li>
+                    <li>CSS,</li>
+                    <li>JAVASCRIPT</li>
+                </ol>
+                `,
         source: 'https://kruchy1980.github.io/todo-app/',
     },
     {
         img: './images/proj-images/3.countdown-timer.jpg',
-        title: 'Odliczator czasu',
-        shortDescription: 'Prosty Czaso odliczator z możliwością ustawiania obrazka wydarzenia',
+        title: 'Odliczacz czasu',
+        shortDescription: `Prosty Czaso odliczator z możliwością ustawiania obrazka wydarzenia - projekt bez połączenia z zewnętrzną bazą danych.
+                <ol>Użyte techonologie:
+                    <li>HTML,</li>
+                    <li>CSS,</li>
+                    <li>JAVASCRIPT</li>
+                </ol>
+                `,
         source: 'https://kruchy1980.github.io/countdown-timer/',
     },
     {
         img: './images/proj-images/4.bill-splitter.jpg',
         title: 'Obliczacz napiwków',
-        shortDescription: 'Prosty Kalkulator obliczania należności włącznie z napiwkiem na jednego członka grupy',
+        shortDescription: `Prosty Kalkulator obliczania należności włącznie z napiwkiem na jednego członka grup - projekt bez połączenia z zewnętrzną bazą danych.
+                <ol>Użyte techonologie:
+                    <li>HTML,</li>
+                    <li>CSS,</li>
+                    <li>JAVASCRIPT</li>
+                </ol>
+                `,
         source: 'https://kruchy1980.github.io/bill-splitter/',
     },
     {
         img: './images/proj-images/5.stopper.jpg',
         title: 'Stoper',
-        shortDescription: 'Prosty stoper z możliwością dostosowywania kolorystyki',
+        shortDescription: `Stoper z możliwością dostosowywania kolorystyki - projekt nie jest połączony z zewnętrzną bazą danych, rekordy są zapisywane tylko podczas bieżącej sesji.
+                <ol>Użyte techonologie:
+                    <li>HTML,</li>
+                    <li>CSS,</li>
+                    <li>JAVASCRIPT</li>
+                </ol>
+                `,
         source: 'https://kruchy1980.github.io/stopper/',
     },
     {
         img: './images/proj-images/6.register-form.jpg',
         title: 'Formularz rejestracyjny',
-        shortDescription: 'Dynamicznie walidowany formularz rejestracyjny',
+        shortDescription: `Dynamicznie walidowany formularz rejestracyjny.
+                <ol>Użyte techonologie:
+                    <li>HTML,</li>
+                    <li>CSS,</li>
+                    <li>JAVASCRIPT</li>
+                </ol>
+                `,
         source: 'https://kruchy1980.github.io/register-form/',
     },
     {
         img: './images/proj-images/7.my-notes.jpg',
         title: 'Notatnik',
-        shortDescription: 'Notatnik umożliwiający dodawanie notatek do określonych kilku kategorii - bez użycia zewnętrznej bazy danych',
+        shortDescription: `Notatnik umożliwiający dodawanie notatek do określonych kilku kategorii - projekt bez połączenia z zewnętrzną bazą danych.
+                <ol>Użyte techonologie:
+                    <li>HTML,</li>
+                    <li>CSS,</li>
+                    <li>JAVASCRIPT</li>
+                </ol>
+                `,
         source: 'https://kruchy1980.github.io/notes/',
     },
     {
         img: './images/proj-images/8.magic-8-ball.jpg',
         title: 'Magiczna bila 8',
-        shortDescription: 'Zapytaj a odpowiem',
+        shortDescription: `Zapytaj a odpowiem - gra w pytanie do magicznej bili numer 8.
+                <ol>Użyte techonologie:
+                    <li>HTML,</li>
+                    <li>CSS,</li>
+                    <li>JAVASCRIPT</li>
+                </ol>
+                `,
         source: 'https://kruchy1980.github.io/magic-8-ball/',
     },
     {
         img: './images/proj-images/9.budget.jpg',
         title: 'Twój Portfel',
-        shortDescription: `Aplikacja obliczająca Twój budżet na podstawie podanych danych - bez użycia zewnętrznej bazy danych`,
+        shortDescription: `Aplikacja obliczająca Twój budżet na podstawie podanych danych - bez użycia zewnętrznej bazy danych.
+                <ol>Użyte techonologie:
+                    <li>HTML,</li>
+                    <li>CSS,</li>
+                    <li>JAVASCRIPT</li>
+                </ol>
+                `,
         source: 'https://kruchy1980.github.io/finance-manager/',
     },
     {
         img: './images/proj-images/10.currency-rate.jpg',
         title: 'Przelicznik wymiany walut',
         shortDescription: `Aplikacja korzystająca z api przeliczników walut i obliczająca ilość otrzymanych pieniędzy po wymianie.
-        Technologie użyte:
-        <ul>       
-        <1i>1. HTML</li>
-        <1i>2. CSS</li>
-        <1i>3. Javascript</li>
-        </ul>`,
+                <ol>Użyte techonologie:
+                    <li>HTML,</li>
+                    <li>CSS,</li>
+                    <li>JAVASCRIPT</li>
+                </ol>
+                `,
         source: 'https://kruchy1980.github.io/exchange-rate-app/',
     },
     {
         img: './images/proj-images/11.drink-searcher.jpg',
         title: 'Wyszukiwarka drinków',
-        shortDescription: `Projekt, w którym z przygotowanej w HTML\'u listy możemy wyszukać dany produkt(drink) wpisując jego nazwę w wyszukiwarkę.<br>Użyte technologie użyte:<ul><1i>1. HTML</li><1i>2. CSS</li><1i>3.Javascript</li></ul>`,
+        shortDescription: `Projekt, w którym z przygotowanej w HTML\'u listy możemy wyszukać dany produkt(drink) wpisując jego nazwę w wyszukiwarkę - projekt korzystający tylko z listy stworzonej w HTML'u.
+                <ol>Użyte techonologie:
+                    <li>HTML,</li>
+                    <li>CSS,</li>
+                    <li>JAVASCRIPT</li>
+                </ol>
+                `,
         source: 'https://kruchy1980.github.io/drink-searcher/',
     }
 ];

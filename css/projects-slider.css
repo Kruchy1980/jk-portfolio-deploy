@@ -42,6 +42,7 @@
         border-radius: 10px;
         background-color: #333;
         justify-content: center;
+        align-items: center;
         padding: 3px 0;
         color: #ffff11;
         width: 100%;
@@ -88,19 +89,18 @@
         font-size: 14px;
         width: 100%;
         margin: 2% 0;
-        text-align: center;
+        text-align: left;
         position: absolute;
         top: 25%;
         border: 1px solid #000;
         border-radius: 20px;
-        padding: 1%;
+        padding: 10px;
         transition: font-size 0.5s;
     }
     
     .projects__box__item--description ol {
         margin-top: 10px;
         font-weight: bold;
-        text-decoration: underline;
     }
     
     .projects__box__item--description li {
