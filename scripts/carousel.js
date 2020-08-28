@@ -149,6 +149,8 @@ const slideTitle = document.querySelector('.projects__box__item--title');
 const slideDescription = document.querySelector('.projects__box__item--description');
 // Indicator dots
 const indicators = [...document.querySelectorAll('.indicators-dots span')];
+// Additional variable for test
+const projectSection = document.querySelector('#projects');
 
 
 // II. Functions
@@ -185,6 +187,7 @@ const indicatorActiveSet = () => {
 };
 
 // Changing slides method
+
 const slideChange = () => {
     // Statement if the list is on the end or other side
     if (activeSlide >= slideList.length - 1) activeSlide = -1;
@@ -216,8 +219,8 @@ const switchSlideOnClick = e => {
 
 
 // Declare interval method
-let = slideInterval = setInterval(slideChange, timer);
 
+let slideInterval = setInterval(slideChange, timer);
 // III. Event listeners
 //  Changing on arrows
 window.addEventListener('keyup', changeOnArrows);
@@ -230,3 +233,10 @@ if (indicators) {
         }
     });
 };
+
+
+
+// Tests:
+// if (window.scroll >= projectSection.offsetHeight) {
+//     slideInterval = setInterval(slideChange, timer);
+// };

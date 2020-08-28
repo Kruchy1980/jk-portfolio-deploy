@@ -36,8 +36,8 @@ const activeLinks = event => {
         } else {
             link.classList.remove('active--links');
         }
-    })
-}
+    });
+};
 
 // Dynamic navigation changing on scroll - Event Listener
 window.addEventListener('scroll', activeLinks);

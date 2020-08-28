@@ -57,7 +57,7 @@ const projectsDataList = [{
 // II. FUNCTIONS
 // Add an item to ul
 const addProject = () => {
-    console.log('projects added');
+    // console.log('projects added');
     projectsDataList.forEach(el => {
         // console.log(el);
         let listElement = document.createElement('li');
