@@ -220,7 +220,7 @@ let = slideInterval = setInterval(slideChange, timer);
 
 // III. Event listeners
 //  Changing on arrows
-window.addEventListener('keydown', changeOnArrows);
+window.addEventListener('keyup', changeOnArrows);
 
 // Changing on click
 if (indicators) {
