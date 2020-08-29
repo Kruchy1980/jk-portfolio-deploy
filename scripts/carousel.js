@@ -160,7 +160,7 @@ const sliderStart = () => {
             // Statement Of arrow change
             if (e.keyCode === 37 || e.keyCode === 39) {
                 clearInterval(slideInterval);
-                e.keyCode === 37 ? activeSlide-- : activeSlide++;
+                e.keyCode === 37 ? activeSlide-- : e.keyCode === 39 ? activeSlide++ : activeSlide;
             }
             // Statement of cycling slides
             if (activeSlide === slideList.length) {
@@ -220,12 +220,7 @@ const sliderStart = () => {
         };
 
 
-        // Declare interval method
-        // if (window.scrollY >= projectSection.offsetHeight) {
-        //     console.log('Jestem na miejscu');
-        // } else {
-        //     console.log('Nie ma mnie na miejscu');
-        // }
+
         let slideInterval = setInterval(slideChange, timer);
         // III. Event listeners
         //  Changing on arrows
@@ -243,4 +238,4 @@ const sliderStart = () => {
     }
 };
 
-window.addEventListener('scroll', sliderStart);
+window.addEventListener('scroll', sliderStart, false);
