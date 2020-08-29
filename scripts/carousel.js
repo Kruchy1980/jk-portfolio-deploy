@@ -138,7 +138,7 @@ const slideList = [{
 ];
 
 // Sliding time - defaulted value
-let timer = 8000;
+let timer = 5000;
 // Active slide- defaulted value
 let activeSlide = 0;
 // Single image
@@ -154,89 +154,93 @@ const projectSection = document.querySelector('#projects');
 
 
 // II. Functions
-const changeOnArrows = (e) => {
-    // Statement Of arrow change
-    if (e.keyCode === 37 || e.keyCode === 39) {
-        clearInterval(slideInterval);
-        e.keyCode === 37 ? activeSlide-- : activeSlide++;
+const sliderStart = () => {
+    if (window.scrollY >= projectSection.offsetHeight) {
+        const changeOnArrows = (e) => {
+            // Statement Of arrow change
+            if (e.keyCode === 37 || e.keyCode === 39) {
+                clearInterval(slideInterval);
+                e.keyCode === 37 ? activeSlide-- : activeSlide++;
+            }
+            // Statement of cycling slides
+            if (activeSlide === slideList.length) {
+                activeSlide = 0;
+            } else if (activeSlide < 0) {
+                activeSlide = slideList.length - 1;
+            }
+            // What to do everytime the function is called
+            // Image set
+            singleImage.src = slideList[activeSlide].img;
+            slideTitle.href = slideList[activeSlide].source;
+            slideTitle.alt = slideList[activeSlide].title;
+            slideTitle.innerHTML = `<i class="far fa-hand-point-right"></i> ${slideList[activeSlide].title}`;
+            slideDescription.innerHTML = slideList[activeSlide].shortDescription;
+            // Change the indicator
+            indicatorActiveSet();
+            // Set the interval once more
+            slideInterval = setInterval(slideChange, timer);
+        };
+
+        // Indicator set function
+        const indicatorActiveSet = () => {
+            const activeIndicator = indicators.findIndex(el => el.classList.contains('active'));
+            indicators[activeIndicator].classList.remove('active');
+            indicators[activeSlide].classList.add('active');
+        };
+
+        // Changing slides method
+
+        const slideChange = () => {
+            // Statement if the list is on the end or other side
+            if (activeSlide >= slideList.length - 1) activeSlide = -1;
+            activeSlide++;
+            singleImage.src = slideList[activeSlide].img;
+            slideTitle.href = slideList[activeSlide].source;
+            slideTitle.alt = slideList[activeSlide].title;
+            slideTitle.innerHTML = `<i class="far fa-hand-point-right"></i> ${slideList[activeSlide].title}`;
+            slideDescription.innerHTML = slideList[activeSlide].shortDescription;
+            indicatorActiveSet();
+        };
+
+        // Change on click
+        const switchSlideOnClick = e => {
+            if (e) {
+                // console.log(e, e.target);
+                clearInterval(slideInterval);
+                activeSlide = Number(e.target.id) - 1;
+                // console.log(activeSlide);
+                singleImage.src = slideList[activeSlide].img;
+                slideTitle.href = slideList[activeSlide].source;
+                slideTitle.alt = slideList[activeSlide].title;
+                slideTitle.innerHTML = `<i class="far fa-hand-point-right"></i> ${slideList[activeSlide].title}`;
+                slideDescription.innerHTML = slideList[activeSlide].shortDescription;
+                indicatorActiveSet();
+                slideInterval = setInterval(slideChange, timer);
+            }
+        };
+
+
+        // Declare interval method
+        // if (window.scrollY >= projectSection.offsetHeight) {
+        //     console.log('Jestem na miejscu');
+        // } else {
+        //     console.log('Nie ma mnie na miejscu');
+        // }
+        let slideInterval = setInterval(slideChange, timer);
+        // III. Event listeners
+        //  Changing on arrows
+        window.addEventListener('keyup', changeOnArrows);
+
+        // Changing on click
+        if (indicators) {
+            indicators.forEach(el => {
+                if (el.tagName === 'SPAN') {
+                    el.addEventListener('click', switchSlideOnClick);
+                }
+            });
+        };
+
     }
-    // Statement of cycling slides
-    if (activeSlide === slideList.length) {
-        activeSlide = 0;
-    } else if (activeSlide < 0) {
-        activeSlide = slideList.length - 1;
-    }
-    // What to do everytime the function is called
-    // Image set
-    singleImage.src = slideList[activeSlide].img;
-    slideTitle.href = slideList[activeSlide].source;
-    slideTitle.alt = slideList[activeSlide].title;
-    slideTitle.innerHTML = `<i class="far fa-hand-point-right"></i> ${slideList[activeSlide].title}`;
-    slideDescription.innerHTML = slideList[activeSlide].shortDescription;
-    // Change the indicator
-    indicatorActiveSet();
-    // Set the interval once more
-    slideInterval = setInterval(slideChange, timer);
 };
 
-// Indicator set function
-const indicatorActiveSet = () => {
-    const activeIndicator = indicators.findIndex(el => el.classList.contains('active'));
-    indicators[activeIndicator].classList.remove('active');
-    indicators[activeSlide].classList.add('active');
-};
-
-// Changing slides method
-
-const slideChange = () => {
-    // Statement if the list is on the end or other side
-    if (activeSlide >= slideList.length - 1) activeSlide = -1;
-    activeSlide++;
-    singleImage.src = slideList[activeSlide].img;
-    slideTitle.href = slideList[activeSlide].source;
-    slideTitle.alt = slideList[activeSlide].title;
-    slideTitle.innerHTML = `<i class="far fa-hand-point-right"></i> ${slideList[activeSlide].title}`;
-    slideDescription.innerHTML = slideList[activeSlide].shortDescription;
-    indicatorActiveSet();
-};
-
-// Change on click
-const switchSlideOnClick = e => {
-    if (e) {
-        // console.log(e, e.target);
-        clearInterval(slideInterval);
-        activeSlide = Number(e.target.id) - 1;
-        // console.log(activeSlide);
-        singleImage.src = slideList[activeSlide].img;
-        slideTitle.href = slideList[activeSlide].source;
-        slideTitle.alt = slideList[activeSlide].title;
-        slideTitle.innerHTML = `<i class="far fa-hand-point-right"></i> ${slideList[activeSlide].title}`;
-        slideDescription.innerHTML = slideList[activeSlide].shortDescription;
-        indicatorActiveSet();
-        slideInterval = setInterval(slideChange, timer);
-    }
-};
-
-
-// Declare interval method
-
-let slideInterval = setInterval(slideChange, timer);
-// III. Event listeners
-//  Changing on arrows
-window.addEventListener('keyup', changeOnArrows);
-
-// Changing on click
-if (indicators) {
-    indicators.forEach(el => {
-        if (el.tagName === 'SPAN') {
-            el.addEventListener('click', switchSlideOnClick);
-        }
-    });
-};
-
-
-
-// Tests:
-// if (window.scroll >= projectSection.offsetHeight) {
-//     slideInterval = setInterval(slideChange, timer);
-// };
+window.addEventListener('scroll', sliderStart);
